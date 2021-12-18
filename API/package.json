@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api todolist challenge with nodeJS, express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JIMO-17/codeChallengeToDoList.git"
+  },
+  "author": "Josue Isai Mesa Mora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JIMO-17/codeChallengeToDoList/issues"
+  },
+  "homepage": "https://github.com/JIMO-17/codeChallengeToDoList#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
