@@ -6,8 +6,8 @@ import DisplayTodos from './components/DisplayTodos';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Todo List</h1>
+    <div className="contenedor">
+      <h1 className="title">To do List Challenge</h1>
       <Todos />
       <DisplayTodos />
     </div>

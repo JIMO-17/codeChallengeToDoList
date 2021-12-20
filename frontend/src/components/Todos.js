@@ -30,15 +30,13 @@ const Todos = (props) => {
 
     return (
         <div className="addTodos"> 
-           <input type="text" className="todo-input" onChange={ (e) => handleChange(e) }/>
+           <input type="text" className="todo-input" placeholder="Type a new Task" onChange={ (e) => handleChange(e) }/>
            <button className="add-btn" onClick={() => props.addTodo({
                //here we will write object/todo
                id: Math.floor(Math.random() * 1000),
                item: todo,
                completed: false,
            })}>Add</button>
-           <br/>
-
         </div>
     )
 }
