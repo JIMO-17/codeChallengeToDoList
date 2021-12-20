@@ -6,11 +6,7 @@ const todoListSchema = new Schema({
         type: String,
         trim: true
     },
-    description: {
-        type: String,
-        trim: true
-    },
-    status: {
+    completed: {
         type: Boolean,
         trim: true
     }
