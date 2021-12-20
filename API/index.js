@@ -26,7 +26,8 @@ app.use( cors(corsOptions) ); */
 
 //conect to MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:/TodoListChallengeDB', {
+// mongoose.connect('mongodb://localhost:/TodoListChallengeDB', {
+mongoose.connect('mongodb+srv://JimoTodoChallenge:JimoTodoChallenge@testtodochallenge.xv9gv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
