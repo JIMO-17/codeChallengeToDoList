@@ -9,6 +9,9 @@
     --naranja: #FF7900;
     --azulclaro: #009EFF;
     --azulOscuro: #003AFF;
+    --verdeClaro: #80cc00;
+    --rojo: #bb1c2a;
+    --amarillo: #fcbd00;
  }
  html{
      box-sizing: border-box;
@@ -121,3 +124,92 @@ h1{
     background-color: var(--azulOscuro);
 }
 
+.displaytodos ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .card{
+        flex-direction: row;
+    }
+}
+
+.card .card-item{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.card .card-item input{
+    height: 3rem;
+    width: 20rem;
+    background-color:transparent;
+    border: none;
+    color: var(--negro);
+    text-align: center;
+}
+
+.btns{
+    display: flex;
+}
+
+.btns button{
+    padding: 1rem 2rem;
+    border: none;
+    color:var(--blanco);
+    font-weight: 700;
+}
+.btns button:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+.btns .btnEdit{
+    background-color: var(--azulOscuro);
+}
+.btns .btnCompleted{
+    background-color: var(--verdeClaro);
+}
+.btns .btnDelete{
+    background-color: var(--rojo);
+}
+.btninCompleted{
+    background-color: var(--amarillo);
+}
+
+.active{
+    background-color: var(--amarillo);
+}
+.completed{
+    background-color: var(--verdeClaro); 
+}
+.statusT{
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.card-item:last-of-type{
+    margin-top: .5rem;
+}
+
+@media (min-width: 768px) {
+    .card-item:last-of-type{
+        margin-top: 0.2rem;
+    }
+}

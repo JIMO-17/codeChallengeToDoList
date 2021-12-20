@@ -19,17 +19,22 @@ const TodoItem = (props) => {
 
     return (
         <li key={item.id} className="card">
-            <textarea ref={inputRef} disabled={inputRef} defaultValue={item.item} onKeyPress={(e) => update(item.id, inputRef.current.value, e)}/>
-            <div className="btns">
-                <button onClick={() => changeFocus()}>Edit</button>{" "} 
-                {item.completed === false ? 
-                    <button onClick={() => completeTodo(item.id)}>Complete</button> 
-                    : 
-                    <button onClick={() => incompleteTodo(item.id)}>Incomplete</button>
-                }{" "}
-                <button onClick={() => removeTodo(item.id)}>Delete</button>{" "} 
+            <div className="card-item">
+                <input ref={inputRef} disabled={inputRef} defaultValue={item.item} onKeyPress={(e) => update(item.id, inputRef.current.value, e)}/>
             </div>
-            {item.completed && <span className="completed">done</span>}
+            <div className="btns card-item">
+                <button onClick={() => changeFocus()} className="btnEdit">Edit</button>{" "} 
+                {item.completed === false ? 
+                    <button onClick={() => completeTodo(item.id)} className="btnCompleted">Complete</button> 
+                    : 
+                    <button onClick={() => incompleteTodo(item.id)} className="btninCompleted">Incomplete</button>
+                }{" "}
+                <button onClick={() => removeTodo(item.id)} className="btnDelete">Delete</button>{" "} 
+            </div>
+            <div className="card-item">
+                {item.completed && <span className="completed statusT">✓</span>}
+                {/* {item.completed === false && <span className="active statusT">X</span>} */}
+            </div>
         </li>
     )
 }
