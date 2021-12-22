@@ -1,6 +1,6 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState} from 'react';
 import { connect } from 'react-redux'
-import { addTodos, removeTodos, updateTodos, completeTodos, incompleteTodos } from '../redux/reducer';
+import { addTodos, removeTodos, updateTodos, completeTodos, incompleteTodos} from '../redux/reducer';
 
 const mapStateToProps = (state) => {
     return {

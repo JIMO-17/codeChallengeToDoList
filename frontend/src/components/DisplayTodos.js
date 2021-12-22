@@ -20,7 +20,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const DisplayTodos = (props) => {
-
     const [sort, setSort] = useState("active")
 
     return (

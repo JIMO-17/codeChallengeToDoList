@@ -7,4 +7,3 @@ const store = configureStore({
 
 export default store;
 
-//now let's connect this store to react app
